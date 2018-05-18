@@ -2,6 +2,7 @@ extends layout
 
 block content
     h1= user.first_name + " " + user.last_name
+    h5= user.age
     h5= user.email
     hr
     a.btn.btn-default(href='/user/edit/'+user._id) Edit

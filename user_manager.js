@@ -71,6 +71,7 @@ app.post('/users/add', function(req, res){
     user.first_name = req.body.first_name;
     user.last_name = req.body.last_name;
     user.email = req.body.email;
+    user.age = req.body.age;
 
     user.save(function(err){
         if(err){
@@ -87,6 +88,7 @@ app.post('/users/edit/:id', function(req, res){
     user.first_name = req.body.first_name;
     user.last_name = req.body.last_name;
     user.email = req.body.email;
+    user.age = req.body.age;
 
     let query = {_id:req.params.id};
 
@@ -109,9 +111,9 @@ app.get('/user/edit/:id', function(req, res){
     });
 });
 
-// Delete User
-app.delete('/article/:id', function(req, res){
-    let query = {_id:req.params.id}
+// Delete User (Ajax request)
+app.delete('/user/:id', function(req, res){
+    let query = {_id:req.params.id};
 
     User.remove(query, function(err){
         if(err){
