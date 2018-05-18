@@ -2,7 +2,16 @@ extends layout
 
 block content
     h1 #{title}
+    div(class="listView1")
+        div Name
+        div Email
+        div Age
     ul.list-group
         each user, i in users
-            li.list-group-item
-                a(href='/user/'+user._id)=user.first_name
+            li.list-group-item(class="listView2")
+                div
+                    a(href='/user/'+user._id)=user.first_name
+                div
+                    | #{user.email}
+                div
+                    | #{user.age}

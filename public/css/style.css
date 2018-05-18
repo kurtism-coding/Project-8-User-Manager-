@@ -1,0 +1,9 @@
+.listView1{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px 0 10px;
+}
+.listView2{
+    display: flex;
+    justify-content: space-between;
+}
